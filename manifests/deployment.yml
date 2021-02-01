@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: rajubhvpipelinesjavascriptdocker 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: rajubhvpipelinesjavascriptdocker
+  template:
+    metadata:
+      labels:
+        app: rajubhvpipelinesjavascriptdocker 
+    spec:
+      containers:
+        - name: rajubhvpipelinesjavascriptdocker 
+          image: rajubhv.azurecr.io/rajubhvpipelinesjavascriptdocker
+          ports:
+          - containerPort: 8080
